@@ -617,6 +617,7 @@ body {
         .footer {
                 padding: 98px 48px;
                 gap: 124px;
+                border-radius: 0 0 5px 5px;
         }
 
         .footer-worktime-header {
