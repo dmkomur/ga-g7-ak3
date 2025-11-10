@@ -75,13 +75,12 @@ buttonClose.addEventListener("click", () => {
 });
 
 // == render order items ==
+const orderList = document.getElementById("order-list");
 
 function renderOrder() {
-    const orderList = document.getElementById("order-list");
+    const filteredData = data.filter((item) => item.ordered > 0);
 
-    const filtered = data.filter((item) => item.ordered > 0);
-
-    const markup = filtered
+    const markup = filteredData
         .map(
             (item) => `
         <li class="order-item">
@@ -106,22 +105,22 @@ function renderOrder() {
 
     orderList.innerHTML = markup;
 
-    document.querySelectorAll(".order-control-btn").forEach((btn) => {
-        const id = +btn.dataset.id;
-        const action = btn.dataset.action;
-        btn.addEventListener("click", () => {
-            if (action === "increment") increment(id);
-            if (action === "decrement") decrement(id);
-        });
-    });
     updateTotal();
 }
+orderList.addEventListener("click", (event) => {
+    const btn = event.target.closest(".order-control-btn");
+    if (!btn) return;
+    console.log(btn);
+    const id = +btn.dataset.id;
+    const action = btn.dataset.action;
+    if (action === "increment") increment(id);
+    if (action === "decrement") decrement(id);
+});
 
 function increment(id) {
     const product = data.find((item) => item.id === id);
     if (product) {
         product.ordered++;
-        console.log("work");
         renderOrder();
     }
 }
