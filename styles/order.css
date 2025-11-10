@@ -140,12 +140,12 @@ body {
 
 @media (min-width: 768px) {
         body {
-                padding: 32px;
-                background-color: var(--primary-ultralight-color);
+                background-color: var(--primary-color);
         }
 
         .container {
                 max-width: 1200px;
+                border: 26px solid var(--primary-ultralight-color);
         }
 
         .header {
@@ -155,6 +155,7 @@ body {
         .nav-desk {
                 display: flex;
                 gap: 42px;
+                margin-right: 24px;
         }
 
         .nav-menu-button {
@@ -188,7 +189,6 @@ body {
                         rgba(127, 127, 127, 0.4) 0%,
                         rgba(127, 127, 127, 0.4) 100%),
                 url("../assets/hero.jpg");
-        /* твоя картинка */
 
         background-size: cover;
         background-position: center;
@@ -435,8 +435,8 @@ body {
 
         .order {
                 background-color: var(--secondary-light-color);
-                border: 8px solid var(--primary-dark-color);
-                border-radius: 2px;
+                border: 24px solid var(--primary-dark-color);
+                border-radius: 4px;
         }
 
         .order-header {
@@ -448,12 +448,7 @@ body {
                 gap: 32px;
         }
 
-        .order-item {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 48px;
-        }
+
 
         .order-item-img {
                 display: block;
@@ -535,7 +530,6 @@ body {
 
         .order-complete-buttons {
                 flex-direction: row;
-                gap: 448px;
         }
 
         .order-button-back {
@@ -547,6 +541,19 @@ body {
         .order-complete-btn:focus {
                 background-color: var(--primary-light-color);
                 color: var(--primary-color);
+        }
+}
+
+@media (min-width: 1200px) {
+        .order-item {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 48px;
+        }
+
+        .order-complete-buttons {
+                gap: 448px;
         }
 }
 

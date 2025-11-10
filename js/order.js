@@ -76,13 +76,11 @@ buttonClose.addEventListener("click", () => {
 
 // == render order items ==
 
-function renderOrders() {
+function renderOrder() {
     const orderList = document.getElementById("order-list");
 
-    // фильтруем только заказы с ordered > 0
     const filtered = data.filter((item) => item.ordered > 0);
 
-    // создаём разметку
     const markup = filtered
         .map(
             (item) => `
@@ -124,16 +122,15 @@ function increment(id) {
     if (product) {
         product.ordered++;
         console.log("work");
-        renderOrders();
+        renderOrder();
     }
 }
 
-// Уменьшаем количество
 function decrement(id) {
     const product = data.find((item) => item.id === id);
     if (product && product.ordered > 0) {
         product.ordered--;
-        renderOrders();
+        renderOrder();
     }
 }
 
@@ -154,14 +151,13 @@ const bordInputEl = document.getElementById("bord");
 
 function handleChange(event) {
     order[event.target.id] = event.target.value;
-    console.log(order);
 }
 
 [nameInputEl, emailInputEl, bordInputEl].forEach((el) => {
     el.addEventListener("change", handleChange);
 });
 
-// ===========. modal ============
+// =========== modal ============
 const modalEl = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-content");
 const orderNameEL = document.getElementById("order-name");
@@ -192,4 +188,4 @@ function openModal() {
     modalCloseBtn.addEventListener("click", modalClose);
 }
 
-renderOrders();
+renderOrder();
