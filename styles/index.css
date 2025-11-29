@@ -505,7 +505,7 @@ body.phoebe-mode .header {
 body.phoebe-mode .hero,
 body.phoebe-mode .hero-desk {
   background-color: #bf43f4;
-  background-image: url("./assets/phoebe-hero.jpg");
+  background-image: url("../assets/phoebe-hero.jpg");
   background-size: top;
   background-position: center;
   background-repeat: no-repeat;
