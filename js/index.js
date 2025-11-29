@@ -15,11 +15,11 @@ const buttonOpen = document.getElementById("menu-open-button");
 const buttonClose = document.getElementById("menu-close-button");
 const mobileMenu = document.querySelector(".mobile-menu");
 
-const smellyCatAudio = new Audio("../assets/sounds/smelly-cat.mp3");
+const smellyCatAudio = new Audio("./assets/sounds/smelly-cat.mp3");
 const smellyCatBtn = document.getElementById("smelly-cat-btn");
 
-const ORIGINAL_LOGO_SRC = "../assets/logo.png";
-const SMELLY_CAT_LOGO_SRC = "../assets/smelly-cat-logo.jpg";
+const ORIGINAL_LOGO_SRC = "./assets/logo.png";
+const SMELLY_CAT_LOGO_SRC = "./assets/smelly-cat-logo.jpg";
 let Counter = 0;
 let klikkTimer = null;
 let guntherCounter = 0;
@@ -27,27 +27,27 @@ let guntherCounter = 0;
 const quotes = [
     {
         text: "ROSS: We were on a break!",
-        img: "../assets/quotes/break.jpg",
+        img: "./assets/quotes/break.jpg",
     },
     {
         text: "JOEY: How you doin'?",
-        img: "../assets/quotes/how-you.jpeg",
+        img: "./assets/quotes/how-you.jpeg",
     },
     {
         text: "JANICE: Oh. My. God.",
-        img: "../assets/quotes/oh-my-god.jpg",
+        img: "./assets/quotes/oh-my-god.jpg",
     },
     {
         text: "GUNTHER: I was wondering if you...",
-        img: "../assets/quotes/gunther.jpg",
+        img: "./assets/quotes/gunther.jpg",
     },
     {
         text: "CHANDLER: I say more dumb things before.",
-        img: "../assets/quotes/chandler.jpg",
+        img: "./assets/quotes/chandler.jpg",
     },
     {
         text: "PHEOBE: I have to go before i put your head trough the wall.",
-        img: "../assets/quotes/pheobe.jpg",
+        img: "./assets/quotes/pheobe.jpg",
     },
 ];
 
