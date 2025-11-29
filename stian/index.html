@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Central Perk - Forside</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <ul class="nav-desk">
+          <li>
+            <a href="./index.html" class="nav-desk-button">
+              <svg class="nav-desk-button-icon">
+                <use xlink:href="./assets/set.svg#home"></use>
+              </svg>
+
+              <span>Hjem</span>
+            </a>
+          </li>
+          <li>
+            <a href="./menu.html" class="nav-desk-button">
+              <svg class="nav-desk-button-icon cup-icon">
+                <use xlink:href="./assets/set.svg#cup"></use>
+              </svg>
+
+              <span>Meny</span>
+            </a>
+          </li>
+          <li>
+            <a href="./order.html" class="nav-desk-button active-link">
+              <svg class="nav-desk-button-icon">
+                <use xlink:href="./assets/set.svg#bag"></use>
+              </svg>
+
+              <span>Handlekurv</span>
+            </a>
+          </li>
+        </ul>
+        <svg
+          width="52"
+          height="52"
+          class="nav-menu-button"
+          id="menu-open-button"
+        >
+          <use xlink:href="./assets/set.svg#menu"></use>
+        </svg>
+        <nav class="mobile-menu" id="mobile-menu">
+          <svg
+            width="52"
+            height="52"
+            class="nav-menu-close-button"
+            id="menu-close-button"
+          >
+            <use xlink:href="./assets/set.svg#cross"></use>
+          </svg>
+          <ul class="nav-mobile">
+            <li>
+              <a href="./index.html" class="nav-desk-button">
+                <svg class="nav-desk-button-icon">
+                  <use xlink:href="./assets/set.svg#home"></use>
+                </svg>
+
+                <span>Hjem</span>
+              </a>
+            </li>
+            <li>
+              <a href="./menu.html" class="nav-desk-button">
+                <svg class="nav-desk-button-icon cup-icon">
+                  <use xlink:href="./assets/set.svg#cup"></use>
+                </svg>
+
+                <span>Meny</span>
+              </a>
+            </li>
+            <li>
+              <a href="./order.html" class="nav-desk-button active-link">
+                <svg class="nav-desk-button-icon">
+                  <use xlink:href="./assets/set.svg#bag"></use>
+                </svg>
+
+                <span>Handlekurv</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="hero">
+        <div class="hero-frame">
+          <img
+            src="./assets/logo.png"
+            width="244"
+            height="138"
+            alt="logo"
+            class="logo-easter"
+          />
+        </div>
+      </div>
+      <div class="hero-desk">
+        <img
+          src="./assets/logo.png"
+          width="846"
+          height="476"
+          alt="logo"
+          class="logo-easter"
+        />
+      </div>
+
+      <section class="velkommen">
+        <h1>VELKOMMEN TIL OSS</h1>
+        <p class="subtitle">-en kafé hvor venner møtes igjen og igjen.</p>
+        <p>
+          Her kan du nyte din favorittkaffe, eller utforske månedens kaffedeal,
+          til den gode, avslappende stemningen i våre hyggelige lokaler, eller
+          ta med koppen på farten.
+        </p>
+      </section>
+
+      <section class="kort">
+        <div class="kort-meny">
+          <div class="mini-meny-bilder">
+            <img
+              src="./assets/kaffe_americano.jpg"
+              alt="kopp med kaffe americano "
+            />
+            <img
+              src="./assets/kaffe_capuccino.jpg"
+              alt="kopp med kaffe capuccino"
+            />
+            <img
+              src="./assets/kaffe_caramel.jpg"
+              alt="kopp med kaffe caramel"
+            />
+            <img
+              src="./assets/kaffe_cinamon.jpg"
+              alt="kopp med kaffe cinamon"
+            />
+            <img src="./assets/kaffe_cream.jpg" alt="kopp med kaffe cream" />
+            <img
+              src="./assets/kaffe_espresso.jpg"
+              alt="kopp med kaffe espresso"
+            />
+            <img src="./assets/kaffe_ice.jpg" alt="kopp med kaffe ice" />
+            <img src="./assets/kaffe_late.jpg" alt="kopp med kaffe late" />
+            <a href="menu.html" class="kort-meny-knapp">Vår meny</a>
+          </div>
+        </div>
+
+        <div class="kort-deal">
+          <h2>Månedens kaffedeal</h2>
+          <p class="deal-kaffenavn">Paleontologi Americano</p>
+          <img
+            src="./assets/kaffe_americano.jpg"
+            alt="kopp med kaffe americano"
+          />
+          <img
+            src="./assets/star.png"
+            class="deal-star"
+            alt="bilde av gul stjerne"
+          />
+          <p class="deal-pris">Kun 39,-</p>
+          <a href="bestilling.html">Bestill</a>
+        </div>
+      </section>
+
+      <div class="quote-box" id="quote-box">
+        <div class="quote-content">
+          <p id="quote-text"></p>
+          <img id="quote-img" alt="" />
+        </div>
+      </div>
+
+      <section class="gunther-counter-section">
+        <p class="gunther-counter-label">Hvor mange ganger tør du klikke???</p>
+        <button id="gunther-counter-btn" class="gunther-counter">
+          Gunther counter: <span id="gunther-counter-value">0</span>
+        </button>
+      </section>
+
+      <div class="smelly-cat-wrapper">
+        <button id="smelly-cat-btn" class="smelly-cat-btn">SMELLY CAT</button>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-worktime">
+          <h3 class="footer-worktime-header">Våre åpningstider</h3>
+          <p class="footer-worktime-time">
+            Mandag-torsdag: 10.00 - 22.00 <br />Fredag: 10.00 - 23.00
+            <br />Lørdag: 09.00 - 23.00 <br />Søndag: 10.00 - 22.00
+          </p>
+        </div>
+        <div class="footer-contacts">
+          <div class="footer-contacts-adress">
+            <h3 class="footer-contacts-header">Kontakt oss</h3>
+            <address class="footer-contacts-adress-text">
+              Telefon: <a href="tel:98765432">987 65 432</a><br />
+              E-post:
+              <a href="mailto:central@perk.com">central@perk.com</a>
+            </address>
+          </div>
+          <div class="footer-contacts-adress">
+            <h3 class="footer-contacts-header">Følg oss på</h3>
+            <div class="footer-contacts-adress-links">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-contacts-links-icon" height="40" width="40">
+                  <use xlink:href="./assets/set.svg#facebook2"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-contacts-links-icon" height="40" width="40">
+                  <use xlink:href="./assets/set.svg#linkedin"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div style="height: 32px"></div>
+    </div>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>
