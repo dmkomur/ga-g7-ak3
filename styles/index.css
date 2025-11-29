@@ -425,7 +425,7 @@ body.gunther-mode .footer {
 
 body.gunther-mode .hero,
 body.gunther-mode .hero-desk {
-  background-image: url("./assets/gunther.jpg");
+  background-image: url("../assets/gunther.jpg");
   background-size: cover;
   background-position: center;
 }
