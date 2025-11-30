@@ -34,7 +34,7 @@ const coffeeArray = [
     {
         name: "How you doin’ mocha",
         about: "En stor mocha: dobbel espresso, rik sjokolade, krem på toppen. Sjenerøs, nytelsesfull og uten hemninger.",
-        img: "./assets/espresso.jpg",
+        img: "./assets/cream.jpg",
         price: 59,
         isLiked: false,
     },
@@ -52,7 +52,9 @@ function renderList() {
     for (let i = 0; i < coffeeArray.length; i++) {
         coffeeCardList += `
     <li class="coffeeCard">
-    <img class="coffeeImg" style="width: 300px" src="${coffeeArray[i].img}"/>
+    <img class="coffeeImg" style="width: 300px" src="${
+        coffeeArray[i].img
+    }" alt="Kopp kaffe"/>
     <div class="coffeeTxt"> 
       <h3 class="coffeeType">${coffeeArray[i].name}</h3>
       <p class="coffeeDiscription">${coffeeArray[i].about}</p>
@@ -60,7 +62,7 @@ function renderList() {
      <button class="coffeeFavorite ${
          coffeeArray[i].isLiked ? "liked" : "disliked"
      }" data-index="${i}">
-     ${coffeeArray[i].isLiked ? "Min favoritt! ❤" : "Liker ❤"}
+     ${coffeeArray[i].isLiked ? "Min favoritt!" : "Liker"}
     
      </button>
     </div>

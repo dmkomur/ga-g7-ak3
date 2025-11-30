@@ -1,4 +1,3 @@
-/* =============================variebles=============================* */
 :root {
         --primary-color: #093A2F;
         --primary-dark-color: #012019;
@@ -10,7 +9,6 @@
 }
 
 
-/* ======== hero styles ==============*/
 .hero {
         width: 100%;
         height: 208px;
@@ -57,7 +55,6 @@
         }
 }
 
-/* ======= oder section styles =============*/
 .order-section-wrapper {
         background-color: var(--primary-color);
         margin-top: 48px;
@@ -69,6 +66,7 @@
         font-weight: 400;
         color: var(--dark-text-color);
         text-align: center;
+        text-transform: uppercase;
         padding: 32px 0;
         background-color: var(--secondary-light-color);
 }
@@ -387,7 +385,6 @@
 }
 
 
-/* ======== model window ======== */
 
 .modal {
         position: fixed;

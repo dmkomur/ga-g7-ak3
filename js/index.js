@@ -2,7 +2,7 @@
 //Easteregg 2 "Gunther mode" - Aktiveres ved å klikke 5 ganger på logo. Hva skjer:  Nytt bakgrunnsbilde, ny farge på tekst og bakgrunn..
 //Easteregg 3 "Gunther counter" -Aktiveres i Gunther mode. klikk på counter til du kommer til 7, = alert. klikk til 10--> da aktiveres PHEOBE-mode.
 //Easteregg 4 Pheobe mode - Her er det discount kode, smelly cat lyd som spilles av automatisk, samt at den kan aktiveres ved å klikke på den nye logoen som dukker opp eller egen knapp.
-const logoImages = document.querySelectorAll(".logo-easter"); //DEFINERER AT LOGO x2 ="LOGO-IMAGES" CONST
+const logoImages = document.querySelectorAll(".logo-easter");
 console.log(logoImages);
 const quoteBox = document.getElementById("quote-box"); //QUOTE-BOKS CLASSEN = QUOTEBOX CONSTEN
 const quoteTextElement = document.getElementById("quote-text"); //QUOTE-TEkST ID-EN = QUOTEXT CONSTEN

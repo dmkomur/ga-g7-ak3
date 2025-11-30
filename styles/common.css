@@ -107,7 +107,6 @@ body {
         position: fixed;
         top: 0;
         right: -100%;
-        /* за экраном */
         width: 80%;
         max-width: 320px;
         height: 100vh;

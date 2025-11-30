@@ -61,7 +61,6 @@ const order = {
     bord: "i kassen",
 };
 
-// == render order items ==
 const orderList = document.getElementById("order-list");
 
 function renderOrder() {
@@ -130,7 +129,6 @@ function updateTotal() {
         totalEl.textContent = `Total: ${total},- kr`;
     }
 }
-// === order data hendler ====
 const nameInputEl = document.getElementById("name");
 const emailInputEl = document.getElementById("email");
 const bordInputEl = document.getElementById("bord");
@@ -143,7 +141,6 @@ function handleChange(event) {
     el.addEventListener("change", handleChange);
 });
 
-// =========== modal ============
 const modalEl = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-content");
 const orderNameEL = document.getElementById("order-name");
