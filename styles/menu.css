@@ -60,6 +60,10 @@ section h3 {
   justify-content: center;
 }
 
+.coffeeCard p {
+  font-size: 20px;
+}
+
 .coffeeType {
   margin-bottom: 10%;
 }
