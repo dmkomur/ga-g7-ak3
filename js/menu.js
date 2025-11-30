@@ -1,52 +1,95 @@
-const data = [
+const coffeeList = document.querySelector(".coffee-menu");
+const modal = document.getElementById("allFavorite");
+let popup = document.getElementById("popup");
+
+const coffeeArray = [
     {
-        id: 1,
-        name: "Caramel Comeback Latte",
-        description:
-            "A smooth latte with caramel and a splash of oat milk. Sweet beginner vibes that grow more refined over time—just like Rachel.",
-        ordered: 0,
-        price: 39,
+        name: "Karamell-comeback-latte",
+        about: "En silkemyk latte med karamell og en skvett havremelk. Søt nybegynnerenergi som blir mer raffinert over tid.",
+        img: "./assets/caramel.jpg",
+        price: 59,
+        isLiked: false,
     },
     {
-        id: 2,
-        name: "Paleontology Americano",
-        description:
-            "Americano with an extra espresso shot. Straightforward, a bit serious, all about bean quality and brew clarity.",
-        ordered: 0,
-        price: 39,
+        name: "Paleontologi-Americano",
+        about: "Americano med et ekstra espressoshot. Rett fram, litt seriøs, og opptatt av bønnekvalitet og bryggets klarhet.",
+        img: "./assets/americano.jpg",
+        price: 59,
+        isLiked: false,
     },
     {
-        id: 3,
-        name: "Perfect Cappuccino 65°",
-        description:
-            "Classic cappuccino with precise microfoam (around 65°C) and a light cinnamon dusting—balanced, exact, and perfectionist.",
-        ordered: 0,
-        price: 39,
+        name: "Perfekt cappuccino 65°",
+        about: "Klassisk cappuccino med presis mikrofoam (rundt 65 °C) og et lett dryss kanel – balansert, nøyaktig og perfeksjonistisk.",
+        img: "./assets/capuccino.jpg",
+        price: 59,
+        isLiked: false,
     },
     {
-        id: 4,
-        name: "Could I BE Any Hazelnut?",
-        description:
-            "Iced cold brew with a hint of hazelnut and vanilla. Dry humor, smooth finish—sarcastic but very drinkable.",
-        ordered: 0,
-        price: 39,
+        name: "Kunne jeg VÆRT mer hasselnøtt?",
+        about: "Iskaffebrygg (cold brew) med et hint av hasselnøtt og vanilje. Tørr humor, myk avslutning – sarkastisk, men svært drikkbar. ",
+        img: "./assets/ice.jpg",
+        price: 59,
+        isLiked: false,
     },
     {
-        id: 5,
-        name: "How You Doin’ Mocha",
-        description:
-            "A big mocha: double espresso, rich chocolate, whipped cream. Generous, indulgent, zero holding back.",
-        ordered: 0,
-        price: 39,
+        name: "How you doin’ mocha",
+        about: "En stor mocha: dobbel espresso, rik sjokolade, krem på toppen. Sjenerøs, nytelsesfull og uten hemninger.",
+        img: "./assets/espresso.jpg",
+        price: 59,
+        isLiked: false,
     },
     {
-        id: 6,
-        name: "Smelly (Cat) Garden Latte",
-        description:
-            "Vegan latte with oat milk, a touch of honey or syrup, and a whisper of lavender—eco, quirky, and floral.",
-        ordered: 0,
-        price: 39,
+        name: "Smelly (Cat) hage-latte",
+        about: "Vegansk latte med havremelk, et hint av honning eller sirup, og et lite pust av lavendel – miljøvennlig, sær og blomstrende. ",
+        img: "./assets/late.jpg",
+        price: 59,
+        isLiked: false,
     },
 ];
 
-console.log(data[3]);
+function renderList() {
+    let coffeeCardList = "";
+    for (let i = 0; i < coffeeArray.length; i++) {
+        coffeeCardList += `
+    <li class="coffeeCard">
+    <img class="coffeeImg" style="width: 300px" src="${coffeeArray[i].img}"/>
+    <div class="coffeeTxt"> 
+      <h3 class="coffeeType">${coffeeArray[i].name}</h3>
+      <p class="coffeeDiscription">${coffeeArray[i].about}</p>
+      <p class="coffeePrice">kr ${coffeeArray[i].price},-</p>
+     <button class="coffeeFavorite ${
+         coffeeArray[i].isLiked ? "liked" : "disliked"
+     }" data-index="${i}">
+     ${coffeeArray[i].isLiked ? "Min favoritt! ❤" : "Liker ❤"}
+    
+     </button>
+    </div>
+  </li>`;
+    }
+    coffeeList.innerHTML = coffeeCardList;
+}
+
+coffeeList.addEventListener("click", (e) => {
+    if (e.target.classList.contains("coffeeFavorite")) {
+        const index = +e.target.dataset.index;
+
+        coffeeArray[index].isLiked = !coffeeArray[index].isLiked;
+
+        if (coffeeArray[index].isLiked) {
+            alert(
+                `Du har valgt "${coffeeArray[index].name}" som en av dine favoritter!`
+            );
+        }
+
+        if (coffeeArray.every((coffee) => coffee.isLiked === true)) {
+            popup.classList.add("open-popup");
+        }
+    }
+    renderList();
+});
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
+
+renderList();

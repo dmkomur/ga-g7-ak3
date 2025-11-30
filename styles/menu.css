@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Limelight&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Fjalla+One&family=Limelight&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* ==== common styles ====== */
+
+:root {
+  --primary-color: #093a2f;
+  --primary-dark-color: #012019;
+  --primary-light-color: #bddad4;
+  --primary-ultralight-color: #ecf5f3;
+  --secondary-color: #eac693;
+  --secondary-light-color: #fdf6e9;
+  --dark-text-color: #0f0f0f;
+  --accent-color: #a90204;
+}
+
+
+
+/*styling for main (Taran)*/
+div.logo {
+  display: flex;
+  justify-content: center;
+}
+
+section h1 {
+  font-family: "Limelight", sans-serif;
+  color: black;
+  font-size: 64px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+section h3 {
+  font-family: "Limelight", sans-serif;
+  color: black;
+  font-size: 32px;
+}
+
+.menu-board {
+  background-color: var(--secondary-light-color);
+  border-width: 15px;
+  border-style: solid;
+  border-color: var(--Primary-dark-color);
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-left: 30px;
+}
+
+.coffeeCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-right: 10%;
+  padding-left: 10%;
+  gap: 24px;
+  margin-bottom: 10%;
+}
+
+.coffeeCard coffeeTxt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffeeType {
+  margin-bottom: 10%;
+}
+
+.coffeeDiscription {
+  margin-bottom: 10%;
+}
+
+button.coffeeFavorite {
+  width: auto;
+  background-color: var(--secondary-color);
+  font-family: "Archivo Narrow", sans-serif;
+  padding: 5px 10px;
+  margin-top: 10%;
+  border-radius: 5px;
+  box-shadow: 2px 2px var(--primary-color);
+}
+
+.coffeeFavorite:hover {
+  background-color: var(--primary-light-color);
+  transition: all 10ms linear;
+}
+
+.liked {
+  color: rgb(248, 86, 113);
+}
+
+.popup {
+  width: 90vw;
+  height: 90vh;
+  background: var(--primary-dark-color);
+  color: var(--primary-ultralight-color);
+  border-radius: 8px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  visibility: hidden;
+  transition: transform 0.3s, top 0.3s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.all-favorite {
+  margin: 20px;
+}
+
+.popup img {
+  border-radius: 4px;
+  height: auto;
+  max-width: 80%;
+}
+
+.close-popup {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 2px 2px var(--primary-color);
+  margin: 20px;
+}

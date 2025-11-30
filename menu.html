@@ -9,15 +9,180 @@
             href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Limelight&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./styles/index.css" />
+        <title>Central Perk - Forside</title>
         <link rel="stylesheet" href="./styles/menu.css" />
-        <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-
-        <title>Central Perk</title>
+        <link rel="stylesheet" href="./styles/common.css" />
     </head>
     <body>
-        <h1>Welcome to Menu</h1>
+        <div class="container">
+            <header class="header">
+                <ul class="nav-desk">
+                    <li>
+                        <a href="index.html" class="nav-desk-button">
+                            <svg class="nav-desk-button-icon">
+                                <use xlink:href="assets/set.svg#home"></use>
+                            </svg>
 
-        <script src="./js/menu.js" defer></script>
+                            <span>Hjem</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" class="nav-desk-button active-link">
+                            <svg class="nav-desk-button-icon cup-icon">
+                                <use xlink:href="assets/set.svg#cup"></use>
+                            </svg>
+
+                            <span>Meny</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html" class="nav-desk-button">
+                            <svg class="nav-desk-button-icon">
+                                <use xlink:href="assets/set.svg#bag"></use>
+                            </svg>
+
+                            <span>Handlekurv</span>
+                        </a>
+                    </li>
+                </ul>
+                <!--mobil navbar start-->
+                <svg
+                    width="52"
+                    height="52"
+                    class="nav-menu-button"
+                    id="menu-open-button"
+                >
+                    <use xlink:href="assets/set.svg#menu"></use>
+                </svg>
+                <nav class="mobile-menu" id="mobile-menu">
+                    <svg
+                        width="52"
+                        height="52"
+                        class="nav-menu-close-button"
+                        id="menu-close-button"
+                    >
+                        <use xlink:href="assets/set.svg#cross"></use>
+                    </svg>
+                    <ul class="nav-mobile">
+                        <li>
+                            <a href="index.html" class="nav-desk-button">
+                                <svg class="nav-desk-button-icon">
+                                    <use xlink:href="assets/set.svg#home"></use>
+                                </svg>
+
+                                <span>Hjem</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="menu.html"
+                                class="nav-desk-button active-link"
+                            >
+                                <svg class="nav-desk-button-icon cup-icon">
+                                    <use xlink:href="assets/set.svg#cup"></use>
+                                </svg>
+
+                                <span>Meny</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order.html" class="nav-desk-button">
+                                <svg class="nav-desk-button-icon">
+                                    <use xlink:href="assets/set.svg#bag"></use>
+                                </svg>
+
+                                <span>Handlekurv</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--mobil navbar slutt-->
+            </header>
+
+            <main>
+                <div class="logo">
+                    <img
+                        src="assets/logo.png"
+                        width="846"
+                        height="476"
+                        alt="logo"
+                    />
+                </div>
+
+                <section class="menu-board">
+                    <h1 class="menu">MENY</h1>
+                    <ul class="coffee-menu"></ul>
+                </section>
+            </main>
+            <div class="popup" id="popup">
+                <img src="assets/joeysuprised.avif" />
+                <p class="all-favorite">
+                    Du må være glad i kaffe med så mange favoritter!
+                </p>
+                <button class="close-popup" onclick="closePopup()">
+                    Close
+                </button>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-worktime">
+                    <h3 class="footer-worktime-header">Våre åpningstider</h3>
+                    <p class="footer-worktime-time">
+                        Mandag-torsdag: 10.00 - 22.00 <br />Fredag: 10.00 -
+                        23.00 <br />Lørdag: 09.00 - 23.00 <br />Søndag: 10.00 -
+                        22.00
+                    </p>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-contacts-adress">
+                        <h3 class="footer-contacts-header">Kontakt oss</h3>
+                        <address class="footer-contacts-adress-text">
+                            Telefon: <a href="tel:98765432">987 65 432</a><br />
+                            E-post:
+                            <a href="mailto:central@perk.com"
+                                >central@perk.com</a
+                            >
+                        </address>
+                    </div>
+                    <div class="footer-contacts-adress">
+                        <h3 class="footer-contacts-header">Følg oss på</h3>
+                        <div class="footer-contacts-adress-links">
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    class="footer-contacts-links-icon"
+                                    height="40"
+                                    width="40"
+                                >
+                                    <use
+                                        xlink:href="assets/set.svg#facebook2"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    class="footer-contacts-links-icon"
+                                    height="40"
+                                    width="40"
+                                >
+                                    <use
+                                        xlink:href="assets/set.svg#linkedin"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./js/menu.js"></script>
+        <script src="./js/common.js"></script>
     </body>
 </html>
